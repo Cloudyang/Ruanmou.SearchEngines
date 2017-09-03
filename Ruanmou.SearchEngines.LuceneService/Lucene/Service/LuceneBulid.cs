@@ -59,8 +59,8 @@ namespace Ruanmou.SearchEngines.LuceneService.Service
             {
                 if (writer != null)
                 {
-                    //writer.Optimize(); 创建索引的时候不做合并  merge的时候处理
-                    writer.Close();
+                    //writer.Optimize(); 创建索引的时候s不做合并  merge的时候处理
+                    writer.Dispose();
                 }
             }
         }
@@ -91,7 +91,7 @@ namespace Ruanmou.SearchEngines.LuceneService.Service
                 if (writer != null)
                 {
                     writer.Optimize();
-                    writer.Close();
+                    writer.Dispose();
                 }
                 Console.WriteLine("MergeIndex End");
             }
@@ -144,7 +144,7 @@ namespace Ruanmou.SearchEngines.LuceneService.Service
                 {
                     //if (fileNum > 50)
                     //    writer.Optimize();
-                    writer.Close();
+                    writer.Dispose();
                 }
             }
         }
@@ -264,7 +264,7 @@ namespace Ruanmou.SearchEngines.LuceneService.Service
                 {
                     //if (fileNum > 50)
                     //    writer.Optimize();
-                    writer.Close();
+                    writer.Dispose();
                 }
             }
         }
@@ -303,7 +303,7 @@ namespace Ruanmou.SearchEngines.LuceneService.Service
                 {
                     //if (fileNum > 50)
                     //    writer.Optimize();
-                    writer.Close();
+                    writer.Dispose();
                 }
             }
         }

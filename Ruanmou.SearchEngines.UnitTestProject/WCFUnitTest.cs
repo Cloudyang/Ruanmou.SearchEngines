@@ -16,7 +16,7 @@ namespace Ruanmou.SearchEngines.UnitTestProject
                 string result = client.QueryCommodityPage(1, 30, "男装", null, null, null);
                 client.Close();
             }
-            catch (Exception ex)
+            catch
             {
                 if (client != null)
                     client.Abort();
