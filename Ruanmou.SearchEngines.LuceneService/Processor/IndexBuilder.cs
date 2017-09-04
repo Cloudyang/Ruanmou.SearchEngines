@@ -76,7 +76,7 @@ namespace Ruanmou.SearchEngines.LuceneService.Processor
         {
             try
             {
-                if (CTS.IsCancellationRequested) return;
+           //     if (CTS.IsCancellationRequested) return;
                 ILuceneBulid builder = new LuceneBulid();
                 builder.MergeIndex(PathSuffixList.ToArray());
             }

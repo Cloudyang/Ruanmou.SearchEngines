@@ -15,6 +15,7 @@ namespace Ruanmou.SearchEngines.UnitTestProject
                 client = new WCFTest.SearcherClient();
                 string result = client.QueryCommodityPage(1, 30, "男装", null, null, null);
                 client.Close();
+                Assert.IsNotNull(result);
             }
             catch
             {
